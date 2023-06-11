@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 contract Bytes {
     bytes public str; // slot: 0x0
     /// 当 bytes.length <= 31 bytes 数据是存储在当前槽位(数据左对齐, length * 2 存储在最低位).
-    /// 当 bytes.length > 31 bytes 数据存储在keccak(solt), length + 2 + 1 存储在slot 
+    /// 当 bytes.length > 31 bytes 数据存储在keccak(solt), length * 2 + 1 存储在slot 
 
     // 1bytes => 8 bit
     /// 1111 1111 => 0xff
@@ -28,6 +28,7 @@ contract Bytes {
         // slot: 33 * 2 + 1 = 67 =0x42
         // keccak(slot):   0x1111111111111111111111111111111111111111111111111111111111111111
         // keccak(slot)+1: 0x2200000000000000000000000000000000000000000000000000000000000000
+        // keccak(slot)+n: ....(如何长度 足够长的情况下...)
         
 
 

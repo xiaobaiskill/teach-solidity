@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 contract Arr {
-    uint256[] public nums; // 0x0
+    uint256[] public nums; // 0x0 or bytes32[] 
 
     uint8[] public nums8s; // 0x1
 

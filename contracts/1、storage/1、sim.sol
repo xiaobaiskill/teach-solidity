@@ -25,6 +25,8 @@ contract Sim1 {
 
     // 20 bytes 
     address owner; // 0x01
+    // left 13                        0x0 address .
+    // XXXXXXXXXXXXXXXXXXXXXXXXXXXX 0000000000000000000000000000000000
 
     constructor(uint8 _age, uint16 _money){
         age = _age;
